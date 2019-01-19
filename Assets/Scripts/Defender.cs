@@ -26,8 +26,8 @@ public class DefenderSpawner : MonoBehaviour
         return new Vector2(newX, newY);
     }
 
-    private void SpawnDefender(Vector2 worldPosition)
+    private void SpawnDefender(Vector2 roundedPosition)
     {
-        GameObject newDefender = Instantiate(defender, worldPosition, Quaternion.identity) as GameObject;
+        GameObject newDefender = Instantiate(defender, roundedPosition, Quaternion.identity) as GameObject;
     }
 }
