@@ -15,7 +15,15 @@ public class DefenderSpawner : MonoBehaviour
         Vector2 clickedPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(clickedPosition);
 
-        return worldPosition;
+        return SnapToGrid(worldPosition);
+    }
+
+    private Vector2 SnapToGrid(Vector2 rawWorldPosition)
+    {
+        float newX = Mathf.RoundToInt(rawWorldPosition.x);
+        float newY = Mathf.RoundToInt(rawWorldPosition.y);
+
+        return new Vector2(newX, newY);
     }
 
     private void SpawnDefender(Vector2 worldPosition)
