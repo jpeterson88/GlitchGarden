@@ -6,7 +6,7 @@ public class AttackerSpawner : MonoBehaviour
 {
     [SerializeField] float minSpawnDelay = 1f;
     [SerializeField] float maxSpawnDelay = 5f;
-    [SerializeField] Attacker arrackerPrefab;
+    [SerializeField] Attacker attackerPrefab;
 
     bool spawn = true;
 
@@ -21,11 +21,7 @@ public class AttackerSpawner : MonoBehaviour
 
     void SpawnAttacker()
     {
-        Instantiate(arrackerPrefab, transform.position, transform.rotation);
-    }
-
-    void Update()
-    {
-
+        Attacker newAttacker = Instantiate(attackerPrefab, transform.position, transform.rotation) as Attacker;
+        newAttacker.transform.parent = transform;
     }
 }
