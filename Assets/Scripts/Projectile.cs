@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour
 
         if (attacker && healthComponent)
         {
+            Debug.Log("Ran into " + otherCollider.name);
             healthComponent.DealDamage(damage);
             Destroy(gameObject);
         }

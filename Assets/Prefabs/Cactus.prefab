@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4977392978159564}
   - component: {fileID: 212359402687822770}
-  - component: {fileID: 95975727008323758}
-  - component: {fileID: 114868408417656500}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -53,6 +51,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4984817548978052}
   - component: {fileID: 114734584812138236}
+  - component: {fileID: 114153346820320610}
+  - component: {fileID: 95768957821785266}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321547485494210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0.43, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4977392978159564}
@@ -94,20 +94,20 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842385847037240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2752604, y: 3.027518, z: 0.3262025}
+  m_LocalPosition: {x: 4.1, y: 3.04, z: 0.3262025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4977392978159564}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95975727008323758
+--- !u!95 &95768957821785266
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1161137699747710}
+  m_GameObject: {fileID: 1842385847037240}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6120b9221a6954d15988c213c681bedd, type: 2}
@@ -119,6 +119,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114153346820320610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842385847037240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1a0808b8d1a418bbdf725bf54c6e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1383419217230512, guid: 990fd40f208624d94814627988817cf3, type: 2}
+  gun: {fileID: 1321547485494210}
 --- !u!114 &114734584812138236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,20 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starCost: 100
---- !u!114 &114868408417656500
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1161137699747710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1a0808b8d1a418bbdf725bf54c6e5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1383419217230512, guid: 990fd40f208624d94814627988817cf3, type: 2}
-  gun: {fileID: 1321547485494210}
-  projectile2: {fileID: 0}
 --- !u!212 &212359402687822770
 SpriteRenderer:
   m_ObjectHideFlags: 1
